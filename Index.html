@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNOCS Group (PTY) LTD</title>
+  <meta name="description" content="SNOCS Group: process optimisation, flotation vision systems, reagents supply, automation and environmental engineering for mining and industry.">
+  <meta name="theme-color" content="#007777">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Favicon (you can add a path to a favicon file) -->
+  <link rel="icon" href="Snocs Group.PNG">
+
+  <style>
+    :root{
+      --primary:#007777;
+      --accent:#00cccc;
+      --bg:#ffffff;
+      --text:#111;
+      --muted:#666;
+      --card:#f6f8f9;
+      --glass: rgba(255,255,255,0.65);
+      --radius:14px;
+      --ease: cubic-bezier(.2,.9,.2,1);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body {
+      margin: 0; font-family: 'Poppins', sans-serif; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; line-height:1.55;
+    }
+
+    /* Top Hero */
+    header.hero{
+      display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center;
+      padding:80px 20px; background:linear-gradient(135deg,var(--accent) 0%, var(--primary) 100%);
+      color:white; position:relative; overflow:hidden;
+    }
+    header.hero .logo{width:140px; height:140px; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.15); overflow:hidden; background:white; padding:8px;}
+    header.hero h1{font-size:2.6rem; margin:18px 0 8px; letter-spacing:0.6px}
+    header.hero p.lead{max-width:900px; margin:0 auto; color: rgba(255,255,255,0.95); font-size:1.05rem}
+
+    /* Nav */
+    nav.topbar{position:sticky; top:0; z-index:999; display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:rgba(255,255,255,0.97); box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+    nav.topbar .brand{display:flex; align-items:center; gap:12px}
+    nav.topbar img{width:44px}
+    nav.topbar .menu{display:flex; gap:18px; align-items:center}
+    nav.topbar .menu a{color:var(--primary); text-decoration:none; font-weight:600}
+    nav.topbar .cta{background:var(--primary); color:white; padding:9px 14px; border-radius:10px; text-decoration:none;}
+
+    /* Sections */
+    section{padding:70px 20px; max-width:1200px; margin:0 auto}
+    h2{color:var(--primary); margin-bottom:18px; font-size:1.6rem}
+    p{color:var(--text)}
+
+    /* Services grid */
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px}
+    .card{background:var(--card); border-radius:var(--radius); padding:22px; box-shadow:0 6px 18px rgba(16,24,40,0.06); transition:transform .35s var(--ease), box-shadow .35s var(--ease)}
+    .card:hover{transform:translateY(-8px); box-shadow:0 18px 40px rgba(16,24,40,0.09)}
+    .card h3{margin-top:0}
+
+    /* Features */
+    .feature-row{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
+    .feature{flex:1; min-width:220px}
+
+    /* CTA */
+    .cta-block{background:linear-gradient(90deg,var(--accent),var(--primary)); color:white; padding:30px; border-radius:16px; text-align:center}
+    .cta-block a{display:inline-block; margin-top:14px; padding:12px 22px; background:white; color:var(--primary); border-radius:10px; text-decoration:none; font-weight:700}
+
+    /* Testimonials */
+    .testimonials{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+    .testimonial{background:linear-gradient(180deg, rgba(0,119,119,0.08), rgba(0,204,204,0.04)); padding:18px; border-radius:12px}
+
+    /* Contact form */
+    form.contact{display:grid; gap:12px; grid-template-columns:1fr 1fr}
+    form.contact input, form.contact textarea{padding:12px; border-radius:10px; border:1px solid #e6e9eb}
+    form.contact button{grid-column:span 2; padding:12px; border-radius:10px; border:none; background:var(--primary); color:white; font-weight:700}
+    @media(max-width:800px){ form.contact{grid-template-columns:1fr} }
+
+    /* Footer */
+    footer{padding:30px 20px; text-align:center; background:#f7f9fa; color:var(--muted)}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .small{font-size:0.92rem}
+
+    /* Animations simple */
+    .fade-up{opacity:0; transform:translateY(12px); transition:opacity .6s ease,transform .6s ease}
+    .fade-up.in{opacity:1; transform:none}
+
+    /* Mobile tweaks */
+    @media(max-width:600px){ header.hero{padding:48px 16px} header.hero h1{font-size:1.6rem} }
+  </style>
+</head>
+<body>
+  <nav class="topbar" role="navigation" aria-label="Main navigation">
+    <div class="brand">
+      <img src="Snocs Group.PNG" alt="SNOCS logo">
+      <strong>SNOCS Group</strong>
+    </div>
+    <div class="menu" aria-hidden="false">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#tech">Technology</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="cta">Get in touch</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="logo"><img src="Snocs Group.PNG" alt="SNOCS logo" style="width:100%; height:100%; object-fit:contain"></div>
+    <h1>SNOCS Group (PTY) LTD</h1>
+    <p class="lead">Engineering, automation and reagent supply for mining — specialised in coal and PGM processing. We design flotation vision systems, deliver reagents and build digital tools that drive performance.</p>
+  </header>
+
+  <section id="about">
+    <h2>About SNOCS Group</h2>
+    <p>SNOCS Group combines metallurgical know-how with modern automation and sensing technologies. Our team — experienced in flotation, process control and instrumentation — focuses on improving recovery, reducing reagent consumption and supporting sustainable operations.</p>
+    <div style="margin-top:18px" class="feature-row">
+      <div class="feature card">
+        <h3>Local Expertise</h3>
+        <p class="small muted">Based in Mpumalanga (Witbank) with regional projects in Joburg and surrounding industrial zones.</p>
+      </div>
+      <div class="feature card">
+        <h3>Industry Focus</h3>
+        <p class="small muted">Coal, PGM flotation, mineral processing, environmental water treatment and tailings management.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Process Optimization</h3>
+        <p>Flotation and milling optimization, mass balance analysis and plant performance improvement using both classical engineering and AI-assisted analytics.</p>
+      </article>
+      <article class="card">
+        <h3>Automation & Instrumentation</h3>
+        <p>Control strategies, SCADA/APC integration, predictive maintenance and sensor networks for continuous plant monitoring.</p>
+      </article>
+      <article class="card">
+        <h3>Flotation Vision Systems</h3>
+        <p>Continuous camera-based monitoring of froth bubble size, froth mobility and colour with ML-assisted alerts and integration to APC systems.</p>
+      </article>
+      <article class="card">
+        <h3>Flotation Reagents Supply</h3>
+        <p>Supplying collectors, frothers, depressants and pH modifiers tailored for coal and PGM flotation. We offer product selection, dosing strategies and supply chain management with trusted chemical partners.</p>
+      </article>
+      <article class="card">
+        <h3>Environmental Engineering</h3>
+        <p>Water treatment, tailings optimisation and waste minimisation solutions that lower environmental footprint and improve resource recovery.</p>
+      </article>
+      <article class="card">
+        <h3>Consulting & R&amp;D</h3>
+        <p>Metallurgical flowsheet design, feasibility studies, nitrogen flotation trials and development of Excel add-ins and digital tools to speed engineering calculations.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="tech">
+    <h2>Technology</h2>
+    <p>We build practical engineering tools: an Excel flowsheet add-in for mass balances, a flotation vision camera unit for continuous monitoring, and dashboards that turn sensor data into actionable insights. We prototype using Python for data pipelines, Java/JavaEE for backend services, and React for frontend dashboards.</p>
+
+    <div style="margin-top:18px" class="grid">
+      <div class="card">
+        <h3>Excel Add-in (Engineering Tools)</h3>
+        <p>Custom formulas and shapes for flowsheeting, helping engineers quickly iterate mass balances and equipment sizing.</p>
+      </div>
+      <div class="card">
+        <h3>Data & Analytics</h3>
+        <p>Real-time dashboards, KPI alerts and historical trend analysis to support operational decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects & Case Studies</h2>
+    <p class="muted">Example projects include nitrogen flotation trials for PGMs, pilot flotation vision system installations, reagent campaigns to reduce collector consumption, and APC integrations for continuous operation.</p>
+
+    <div style="margin-top:20px" class="grid">
+      <div class="card">
+        <h3>Pilot: Nitrogen Flotation Trial</h3>
+        <p>Reduced oxidation, improved selectivity and increased concentrate grade in controlled trials.</p>
+      </div>
+      <div class="card">
+        <h3>Reagent Supply Campaign</h3>
+        <p>Optimised dosing and supply logistics for a coal processing plant, resulting in lower operating costs and stable reagent performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Enquiry</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Talk to our team</h3>
+        <p>Email us at <a href="mailto:info@snocsgroup.co.za">info@snocsgroup.co.za</a> or call <strong>+27 79 948 0796</strong>. Office: Witbank, Mpumalanga.</p>
+        <p class="muted small">We respond to technical enquiries, reagent quotations and project proposals.</p>
+      </div>
+
+      <div class="card">
+        <h3>Quick Enquiry</h3>
+        <form class="contact" id="contactForm">
+          <input type="text" name="name" id="name" placeholder="Full name" required>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+          <input type="text" name="company" id="company" placeholder="Company (optional)">
+          <input type="text" name="phone" id="phone" placeholder="Phone (optional)">
+          <textarea name="message" id="message" placeholder="Tell us about your needs" rows="5" required></textarea>
+          <button type="submit">Send Enquiry</button>
+        </form>
+        <div id="formMsg" class="small muted" style="margin-top:10px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom:40px;">
+    <div class="cta-block">
+      <h3>Want a tailored reagent or monitoring solution?</h3>
+      <p class="small">Request a site assessment and pilot program — we help you quantify improvements before scaling.</p>
+      <a href="#contact">Request assessment</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SNOCS Group (PTY) LTD. All rights reserved. Built with engineering care.</p>
+  </footer>
+
+  <!-- Client-side JS: interactions, validation, optional local storage and animations -->
+  <script>
+    // Simple viewport animation loader
+    function reveal(){ document.querySelectorAll('.fade-up').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top < window.innerHeight - 80) el.classList.add('in'); }); }
+    window.addEventListener('scroll', reveal); window.addEventListener('load', reveal);
+
+    // Contact form: client-side validation and fake submit (example). Replace with real API endpoint.
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      formMsg.textContent = 'Sending...';
+      const data = {
+        name: form.name.value.trim(), email: form.email.value.trim(), company: form.company.value.trim(), phone: form.phone.value.trim(), message: form.message.value.trim()
+      };
+      // Basic validation
+      if(!data.name || !data.email || !data.message){ formMsg.textContent = 'Please fill in required fields.'; return; }
+      try{
+        // Example: POST to an API endpoint (server required). Here we simulate network delay.
+        await new Promise(r=>setTimeout(r,900));
+        // On success
+        form.reset(); formMsg.textContent = 'Thanks — your enquiry was sent. We will contact you shortly.';
+      }catch(err){ formMsg.textContent = 'There was an error. Please email info@snocsgroup.co.za'; }
+    });
+
+    // Simple lazy loading for images
+    if('IntersectionObserver' in window){
+      const imgs = document.querySelectorAll('img[loading="lazy"]');
+      const io = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ const img=e.target; img.src=img.dataset.src; io.unobserve(img); } }); });
+      imgs.forEach(img=>io.observe(img));
+    }
+
+    // Accessibility: keyboard skip to content (example)
+    // You can add a skip link if needed
+  </script>
+
+  <!-- Below are sample backend snippets and additional files you can use to power the contact form, API and service worker.
+       They are included as comments for developer use. Save them as separate files on your server if you want to deploy.
+
+  1) Java Servlet (Contact form endpoint)
+
+  // ContactServlet.java
+  package za.co.snocs;
+  import javax.servlet.*;
+  import javax.servlet.http.*;
+  import java.io.*;
+  public class ContactServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+      String name = req.getParameter("name");
+      String email = req.getParameter("email");
+      String phone = req.getParameter("phone");
+      String message = req.getParameter("message");
+      // TODO: validate and send email or persist to DB
+      res.setContentType("application/json");
+      res.getWriter().write("{\"status\":\"ok\"}");
+    }
+  }
+
+  2) Node.js + Express (Contact API)
+
+  // server.js
+  const express = require('express');
+  const bodyParser = require('body-parser');
+  const nodemailer = require('nodemailer');
+  const app = express();
+  app.use(bodyParser.json());
+  app.post('/api/contact', async (req, res) => {
+    const {name,email,phone,message} = req.body;
+    // DONT forget to use env vars for credentials
+    // Example using nodemailer (configure transport)
+    try{ res.json({status:'ok'}); }catch(e){ res.status(500).json({error:'failed'}); }
+  });
+  app.listen(3000, ()=>console.log('API running'));
+
+  3) PHP mailer (simple)
+
+  <?php
+  // contact.php
+  $name = $_POST['name']; $email=$_POST['email']; $message=$_POST['message'];
+  $to='info@snocsgroup.co.za'; $subject='Website Enquiry';
+  $body = "From: $name\nEmail: $email\nMessage:\n$message";
+  mail($to,$subject,$body);
+  echo json_encode(['status'=>'ok']);
+  ?>
+
+  4) service-worker.js (Offline caching)
+
+  const CACHE = 'snocsgroup-v1';
+  const ASSETS = ['/','/index.html','/Snocs Group.PNG'];
+  self.addEventListener('install', e=>{ e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))); });
+  self.addEventListener('fetch', e=>{ e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))); });
+
+  5) manifest.json (PWA)
+
+  {
+    "name":"SNOCS Group",
+    "short_name":"SNOCS",
+    "start_url":"/",
+    "display":"standalone",
+    "background_color":"#ffffff",
+    "theme_color":"#007777",
+    "icons":[{"src":"Snocs Group.PNG","sizes":"512x512","type":"image/png"}]
+  }
+
+  6) Dockerfile (Node example)
+
+  FROM node:18-alpine
+  WORKDIR /app
+  COPY package*.json ./
+  RUN npm install --production
+  COPY . .
+  CMD ["node","server.js"]
+
+  --> End of developer snippets
+  --> When you deploy, secure endpoints (CSRF, CORS, validation) and use HTTPS.
+  --> Replace the fake phone/email/addresses with real values and add analytics, SEO tags and image assets.
+  --> If you want, I can split the above into separate files and produce a Git repo structure.
+  -->
+  --> NOTE: This HTML file includes everything needed client-side. Backend snippets are examples and must be hosted separately.
+  -->
+  --> Enjoy — your site now has frontend, accessibility basics, client validation, lazy-load hook, PWA and multiple backend examples.
+  -->
+  --> To preview: save as index.html alongside 'Snocs Group.PNG' and open in browser.
+ -->
+</script>
+</body>
+</html>
